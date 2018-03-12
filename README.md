@@ -8,7 +8,16 @@ C++ 2D Shmup
 
 [![forthebadge](http://forthebadge.com/images/badges/designed-in-ms-paint.svg)](http://forthebadge.com)
 
+---
 
+1. Clone or fork this repo
+0. Once you have it locally, update the submodules:
 
+```bash 
+git submodule update --init --recursive
+```
 
+3. From there, you must build the solution with CMake.
+
+---
 

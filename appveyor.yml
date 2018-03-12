@@ -2,8 +2,11 @@ version: 1.0.{build}
 image: Visual Studio 2017
 
 configuration:
-- Debug
 - Release
+- Debug
+
+cache:
+- build/lib -> appveyor.yml
 
 before_build:
 - cmd: >-
@@ -17,13 +20,35 @@ before_build:
     cmake -G "Visual Studio 15 2017 Win64" ../
     
 build:
-  project: build/Astral_Insanity_main.vcxproj
+  project: build/PACKAGE.vcxproj
   parallel: true
   verbosity: minimal
   
 after_build:
-- cmd: 7z a Astral_Insanity_%CONFIGURATION%.zip %APPVEYOR_BUILD_FOLDER%/build/bin/%CONFIGURATION%/Astral_Insanity_main.exe %APPVEYOR_BUILD_FOLDER%/build/bin/%CONFIGURATION%/*.dll  %APPVEYOR_BUILD_FOLDER%/build/bin/%CONFIGURATION%/**/*   
+- cmd: >-
 
+    7z a Astral_Insanity_%CONFIGURATION%_win64.zip %APPVEYOR_BUILD_FOLDER%/build/bin/%CONFIGURATION%/Astral_Insanity_main.exe %APPVEYOR_BUILD_FOLDER%/build/bin/%CONFIGURATION%/*.dll  %APPVEYOR_BUILD_FOLDER%/build/bin/%CONFIGURATION%/**/*
+    
+    cd ../build/installer/
+    
+    dir
+    
+    for %%a in (*.exe) do ren "%%~a" "%%~na_%CONFIGURATION%_win64%%~xa"
+    
+    dir
+    
 artifacts:
-  - path: build/Astral_Insanity_%CONFIGURATION%.zip
-    name: Astral_Insanity_%CONFIGURATION%
+  - path: build/*.zip
+    name: Astral_Insanity_zip
+  - path: build/installer/*.exe
+    name: Astral_Insanity_installer
+    
+deploy:
+- provider: GitHub
+  on:
+    appveyor_repo_tag: true
+    CONFIGURATION: Release
+  auth_token:
+    secure: ECVq3ge/gI4xSJEeoXNUiE3fq0samUls/hSKmaGeJmk3CAxEqr02LX2tcVenpINm
+  artifact: Astral_Insanity_installer, Astral_Insanity_zip
+  prerelease: true
