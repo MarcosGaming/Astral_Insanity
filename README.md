@@ -1,4 +1,4 @@
-# Astral Insanity
+# Astral Insanity!
 C++ 2D Shmup
 
 | Windows Build | Linux / Mac Build |
