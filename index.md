@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget ultricies nibh. Aenean rhoncus laoreet arcu ac venenatis.
+Suspendisse congue odio ac metus volutpat malesuada. Suspendisse potenti. Vivamus erat nunc, interdum non purus non, varius tincidunt augue. 
+Mauris eget lacus vulputate, tincidunt elit at, hendrerit dui. Phasellus hendrerit, elit in fringilla vulputate, ligula leo imperdiet ipsum, sed convallis nunc urna nec urna. 
 
 You can use the [editor on GitHub](https://github.com/dooglz/test/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+# Screenshots
 
-```markdown
-Syntax highlighted code block
+![spaceship](img/spaceship1.png)
 
-# Header 1
-## Header 2
-### Header 3
+## Downloads
 
-- Bulleted
-- List
+### Windows 
+- [x64 installer](https://github.com/dooglz/Astral_Insanity/releases/download/V1.0/Astral_Insanity_Release_win64.exe)
+- [x64 zip](https://github.com/dooglz/Astral_Insanity/releases/download/V1.0/Astral_Insanity_Release_win64.zip)
 
-1. Numbered
-2. List
+### Mac 
+- [Installer] (https://github.com/dooglz/Astral_Insanity/releases/download/V1.0/Astral_Insanity__osx.zip)
+- [zip](https://github.com/dooglz/Astral_Insanity/releases/download/V1.0/Astral_Insanity__osx.zip)
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dooglz/test/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Linux
+- [x64 zip](https://github.com/dooglz/Astral_Insanity/releases/download/V1.0/Astral_Insanity_clang_linux.zip)
